@@ -219,6 +219,34 @@ class TestSpendingEndpoints:
             assert isinstance(transaction, dict)
 
 
+class TestOrdersEndpoints:
+    """Test suite for orders endpoints (regression tests after model changes)."""
+
+    def test_get_orders_returns_200(self, client):
+        """Test that GET /api/orders still works after Order model changes."""
+        response = client.get("/api/orders")
+        assert response.status_code == 200
+
+        data = response.json()
+        assert isinstance(data, list)
+
+    def test_get_orders_has_lead_time_field(self, client):
+        """Test that orders include lead_time_days field (may be null for pre-existing orders)."""
+        response = client.get("/api/orders")
+        assert response.status_code == 200
+
+        data = response.json()
+
+        if len(data) > 0:
+            for order in data:
+                # lead_time_days field should exist (may be None)
+                assert "lead_time_days" in order
+                # It's either None or a positive integer
+                if order["lead_time_days"] is not None:
+                    assert isinstance(order["lead_time_days"], int)
+                    assert order["lead_time_days"] > 0
+
+
 class TestRootEndpoint:
     """Test suite for root endpoint."""
 
