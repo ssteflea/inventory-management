@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -106,6 +107,7 @@ export default {
     title: 'Orders',
     description: 'View and manage customer orders',
     allOrders: 'All Orders',
+    submittedOrders: 'Submitted Orders',
     totalOrders: 'Total Orders',
     totalRevenue: 'Total Revenue',
     avgOrderValue: 'Avg Order Value',
@@ -125,7 +127,8 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
+      actualDelivery: 'Actual Delivery',
+      leadTime: 'Lead Time'
     }
   },
 
@@ -204,6 +207,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'
@@ -229,7 +233,11 @@ export default {
     sensors: 'Sensors',
     actuators: 'Actuators',
     controllers: 'Controllers',
-    powerSupplies: 'Power Supplies'
+    powerSupplies: 'Power Supplies',
+    widgets: 'Widgets',
+    components: 'Components',
+    equipment: 'Equipment',
+    consumables: 'Consumables'
   },
 
   // Spending Categories
@@ -323,6 +331,38 @@ export default {
     search: 'Search',
     filter: 'Filter',
     export: 'Export',
-    items: 'items'
+    items: 'items',
+    days: 'days'
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Recommend and order items to restock based on demand forecasts and available budget',
+    budgetLabel: 'Available Budget',
+    budgetHint: 'Drag the slider to set your budget',
+    statBudget: 'Budget',
+    statItemsRecommended: 'Items Recommended',
+    statTotalCost: 'Total Cost',
+    statRemainingBudget: 'Remaining Budget',
+    table: {
+      title: 'Recommended Items',
+      sku: 'SKU',
+      name: 'Name',
+      category: 'Category',
+      stock: 'Stock',
+      stockOn: 'on hand /',
+      stockReorder: 'reorder point',
+      trend: 'Trend',
+      urgency: 'Urgency Score',
+      quantity: 'Recommended Qty',
+      unitCost: 'Unit Cost',
+      lineCost: 'Line Cost'
+    },
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing Order...',
+    orderSuccess: 'Order placed successfully',
+    orderError: 'Failed to place order',
+    noRecommendations: 'No items recommended for this budget'
   }
 }

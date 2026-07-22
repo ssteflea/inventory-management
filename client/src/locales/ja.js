@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '在庫補充',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -106,6 +107,7 @@ export default {
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
+    submittedOrders: '提出済み注文',
     totalOrders: '総注文数',
     totalRevenue: '総収益',
     avgOrderValue: '平均注文額',
@@ -125,7 +127,8 @@ export default {
       totalValue: '合計金額',
       status: 'ステータス',
       expectedDelivery: '予定配達日',
-      actualDelivery: '実際の配達日'
+      actualDelivery: '実際の配達日',
+      leadTime: 'リードタイム'
     }
   },
 
@@ -204,6 +207,7 @@ export default {
     shipped: '出荷済み',
     processing: '処理中',
     backordered: 'バックオーダー',
+    submitted: '提出済み',
     inStock: '在庫あり',
     lowStock: '在庫僅少',
     adequate: '適量'
@@ -229,7 +233,11 @@ export default {
     sensors: 'センサー',
     actuators: 'アクチュエータ',
     controllers: 'コントローラー',
-    powerSupplies: '電源'
+    powerSupplies: '電源',
+    widgets: 'ウィジェット',
+    components: '部品',
+    equipment: '設備',
+    consumables: '消耗品'
   },
 
   // Spending Categories
@@ -323,7 +331,39 @@ export default {
     search: '検索',
     filter: 'フィルター',
     export: 'エクスポート',
-    items: '件'
+    items: '件',
+    days: '日'
+  },
+
+  // Restocking
+  restocking: {
+    title: '在庫補充',
+    description: '需要予測と利用可能予算に基づいて品目の補充を推奨および注文します',
+    budgetLabel: '利用可能予算',
+    budgetHint: 'スライダーをドラッグして予算を設定します',
+    statBudget: '予算',
+    statItemsRecommended: '推奨品目',
+    statTotalCost: '合計コスト',
+    statRemainingBudget: '残り予算',
+    table: {
+      title: '推奨品目',
+      sku: 'SKU',
+      name: '品名',
+      category: 'カテゴリ',
+      stock: '在庫',
+      stockOn: '在庫数 /',
+      stockReorder: '再注文点',
+      trend: 'トレンド',
+      urgency: '緊急度スコア',
+      quantity: '推奨数量',
+      unitCost: '単価',
+      lineCost: '行額'
+    },
+    placeOrder: '注文を発注',
+    placingOrder: '注文処理中...',
+    orderSuccess: '注文が正常に発注されました',
+    orderError: '注文の発注に失敗しました',
+    noRecommendations: 'この予算では推奨品目がありません'
   },
 
   // Product Names
